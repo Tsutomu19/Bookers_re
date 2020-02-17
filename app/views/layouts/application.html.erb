@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>BookersRe</title>
+    <title>Bookers</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+<body>
+
  <% if user_signed_in? %>
-     
+
       <li class="">
         <%= link_to 'Home', "#" %>
       </li>
@@ -13,7 +23,7 @@
         <%= link_to 'Users', user_path(current_user.id)  %>
       </li>
       <li class="">
-        <%= link_to 'Books', "#" %>
+        <%= link_to 'Books', books_path %>
       </li>
        <li class="">
         <%= link_to "log out", destroy_user_session_path, method: :delete %>
@@ -33,7 +43,6 @@
       </li>
     <% end %>
   </ul>
-  
     <%= yield %>
   </body>
 </html>
