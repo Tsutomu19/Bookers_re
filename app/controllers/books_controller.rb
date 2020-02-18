@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!
+
+
   def index
     @book = Book.new
     @books = Book.all
@@ -7,7 +10,6 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    
   end
 
   def new
