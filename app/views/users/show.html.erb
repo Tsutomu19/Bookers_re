@@ -1,8 +1,8 @@
 <h2>User info</h2>
-<h3 class="profile-name"><%= @user.name %></h3>
-    <%= image_tag('no_image.jpg', class: "img-circle pull-left profile-img", style: "width: 100px; height: 100px;") %>
+<h3 class="#"><%= @user.name %></h3>
+    <%= attachment_image_tag @user, :profile_image, fallback: 'no_image.jpg' %>
     <% if @user.id == current_user.id %>
-        <p><%= link_to "Edit", edit_user_path(@user), class: "pull-right" %></p>
+        <p><%= link_to "Edit", edit_user_path(@user) %></p>
     <% end %>
 
 <h1>New book</h1>
