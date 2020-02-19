@@ -1,4 +1,13 @@
 
 <body>
 userの一覧
-</body>
+
+<% @users.each do |user| %>
+    <tbody>
+        <tr>
+            <th><%= attachment_image_tag user, :profile_image,　format: 'jpeg', fallback: "no_image.jpg", size: "60x60" %></th>
+            <td></td>
+            <td></td>
+        </tr>
+    </body>
+
