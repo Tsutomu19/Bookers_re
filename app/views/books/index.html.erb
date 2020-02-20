@@ -12,6 +12,28 @@
       </ul>
     </div>
   <% end %>
+<<<<<<< HEAD
+=======
+<h2>User info</h2>
+    <%= attachment_image_tag @user, :profile_image, fallback: 'no_image.jpg' %><br>
+    <tbody>
+      <tr></tr>
+      <tr>
+    	  <th>name</th>
+    	  <th><%= @user.name %></th>
+      </tr><br>
+      <tr>
+    	  <th>introduction</th>
+    	  <th><%= @user.introduction%></th>
+      </tr>
+    </tbody>
+    <% if @user.id == current_user.id %>
+        <p><%= link_to "Edit", edit_user_path(@user) %></p>
+    <% end %>
+
+
+<h1>New book</h1>
+>>>>>>> c76fcca09a6c022a090b34f0237d8a83b4751e6a
 
 <%= render 'books/list', book: @book, user: @user %>
 
