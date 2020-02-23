@@ -1,4 +1,11 @@
+
+
+
+<% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+<% end %>
 <%= render 'books/list', book: @book, user: @user %>
+
 
 
 <h1>Books</h1>

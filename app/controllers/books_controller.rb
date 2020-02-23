@@ -1,8 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!
 
-
-
   def index
     @book = Book.new
     @books = Book.all
@@ -61,6 +59,7 @@ class BooksController < ApplicationController
     if book.user != current_user
       redirect_to books_path
     else
+
     end
   end
 end

@@ -7,6 +7,6 @@ class User < ApplicationRecord
   attachment :profile_image
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 2, maximum: 20 }
-  validates :introduction, presence: true,
+  validates :introduction,
      length: { maximum: 50, message: 'is too long (maximum is 50 characters)' }
 end
