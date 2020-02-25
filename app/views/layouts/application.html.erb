@@ -5,10 +5,11 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <title>Bookers</title>
   </head>
 <body>
 <header>
+<div class="container">
 <nav class="navbar navbar-inverse">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gnavi">
@@ -33,15 +34,10 @@
     </ul>
   </div>
 </nav>
+</div>
 </header>
 <%= yield %>
 </body>
 </html>
-
-
-
-
-<p>In  <span class="glyphicon glyphicon-book"></span>Bookers,</p>
-<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 
 
