@@ -15,9 +15,12 @@
 <p>you can share and exchange  your opinions , inpressions , and emotions</p>
 <p> about various books!</p>
 
-<td><%= link_to "Log in", new_user_session_path(@book) %></td>
-<td><%= link_to "Sign Up", new_user_registration_path(@book) %></td>
-
+<td>
+<button type="button" class="btn btn-info btn-block"><%= link_to "Log in", new_user_session_path(@book) %></button>
+</td>
+<td>
+<button type="button" class="btn btn-success btn-block"><td><%= link_to "Sign Up", new_user_registration_path(@book) %></td></button>
+</td>
 <div>
 </div>
 </body>
