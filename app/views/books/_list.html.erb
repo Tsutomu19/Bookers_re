@@ -26,7 +26,9 @@
       </tr>
     </table>
     <% if @user.id == current_user.id %>
-        <p><%= link_to "Edit", edit_user_path(user) %></p>
+      <%= link_to edit_user_path(user) do %>
+      <span class="glyphicon glyphicon-wrench"></span>
+      <% end %>
     <% end %>
 
 <h2>New book</h2>
